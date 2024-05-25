@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'DejaVuSansMono';
+    src: url('../ttf/DejaVuSansMono.ttf') format('truetype');
+}
+
+html, body {
+    float: left;
+    margin: 0;
+    padding: 10px;
+    flex-direction: column;
+    font-family: 'DejaVuSansMono', 'Times', sans-serif;
+    font-size: 12px;
+}
+
+#menu-container a {
+    display: none;
+}
+
+.gallery-img {
+    max-height: 600px;
+    cursor: pointer;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#info_modal {
+    flex: 1;
+    padding-top: 10px;
+    text-align: left;
+    float: left;
+    color: #484848;
+}
+
+#menu_modal {
+    padding-top: 10px;
+    float: left;
+    color: #808080;
+}
+
+#menu_modal a{
+    text-decoration: none;
+    color: #808080;
+}
+
+#menu_modal_mobile {
+    display: none; /* Escondido por padrão */
+}
+
+footer {
+    display: block;
+    max-width: 860px;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    body {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .gallery-img {
+        max-width: 100%;
+        max-height: 600px;
+        display: block;
+        float: left;
+        cursor: pointer;
+    }
+
+    #menu_modal {
+        display: none; /* Escondido em dispositivos móveis */
+    }
+
+    #extra_content {
+        display: block; /* Mostrado em dispositivos móveis */
+    }
+
+    #menu_modal_mobile {
+        text-align: center; /* Alinhamento do texto ao centro */
+        padding: 20px 15px; /* Espaçamento interno do rodapé */
+        position: fixed; /* ou absolute */
+        bottom: 0;
+        left: 0;
+        margin-top: 20px;
+        display: block; /* Mostrado em dispositivos móveis */
+        text-align: left;
+        width: 100%;
+        color: #808080;
+    }
+
+    #menu_modal_mobile a{
+        bottom: 0px;
+        text-decoration: none;
+        color: #808080;
+    }
+
+    #info_modal {
+        flex: 1;
+        padding-top: 10px;
+        text-align: left;
+        float: left;
+        color: #484848;
+    }
+
+}

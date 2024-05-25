@@ -1,0 +1,275 @@
+@font-face {
+    font-family: 'DejaVuSansMono';
+    src: url('../ttf/DejaVuSansMono.ttf') format('truetype');
+}
+
+body {
+    font-family: 'DejaVuSansMono', 'Times', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    font-size: 12px;
+}
+em {
+    font-style: normal;
+}
+h1, h2, h3, h4 {
+    font-weight: bold;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: normal;
+    color: #484848;
+}
+
+#menu-container a {
+    text-decoration: none;
+    color: #808080;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: block;
+    border-bottom: 1px solid #000;
+}
+
+#menu-container a:hover {
+    text-decoration: none;
+    color: #00f;
+    display: block;
+}
+
+.row {
+    display: flex;
+}
+
+.menu {
+    margin-right: 10px;
+}
+
+#menu2, #menu3 {
+    padding-left: 296px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu ul li {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #808080;
+    display: block;
+    width: fit-content;
+}
+
+.menu ul li a:hover {
+    text-decoration: none;
+    color: #00f;
+    display: block;
+}
+
+.menu ul li a.active {
+    color: #00f;
+    font-weight: normal;
+}
+
+.no-active:active {
+    pointer-events: none;
+}
+
+#content {
+    display: block;
+    padding: 20px;
+    padding-top: 60px;
+}
+
+#cv {
+    color: #3a3939;
+}
+
+#cv, #privacy_policy {
+    max-width: 900px;
+}
+
+.h1_cv {
+    color: #0c0c0c;
+    font-weight: bold;
+}
+
+.spacing {
+    padding-left: 90px;
+}
+
+.spacing_first {
+    padding-left: 54px;
+}
+
+header h1 {
+    padding-top: 20px;
+}
+
+#post {
+    padding-top: 20px;
+}
+
+.gallery-main {
+    display: block;
+    flex-direction: column; /* Exibe os itens verticalmente */
+    align-items: left;
+}
+
+.gallery-main img {
+    max-width: 900px; /* Limita a largura da imagem a 600px */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 20px; /* Espaçamento entre as imagens */
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.slides {
+    display: none;
+}
+
+.slides.active {
+    display: block;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+
+
+
+/* MOBILE
+
+
+/* Media queries para dispositivos móveis */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1, h2, h3, h4 {
+        font-size: 16px;
+    }
+
+    #menu-container a {
+        color: #777777;
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        font-size: 14px;
+    }
+
+    .menu ul li a {
+        color: #777777;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .menu {
+        margin-right: 0;
+    }
+
+    #menu2, #menu3 {
+        padding-left: 20px;
+    }
+
+    .menu ul li {
+        padding-left: 10px;
+        
+    }
+
+    #content {
+        padding: 10px;
+        padding-top: 40px;
+    }
+
+    #cv, #privacy_policy {
+        max-width: 100%;
+    }
+
+    .spacing {
+        padding-left: 20px;
+    }
+
+    .spacing_first {
+        padding-left: 10px;
+    }
+
+    .gallery-main img {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    h1, h2, h3, h4 {
+        font-size: 12px;
+    }
+
+    #menu-container a {
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        font-size: 12px;
+    }
+
+    #menu2, #menu3 {
+        padding-left: 0px;
+    }
+
+    .menu ul li {
+        padding-left: 15px;
+        width: fit-content;
+    }
+
+    #content {
+        padding: 15px;
+        padding-top: 20px;
+    }
+    
+    #post {
+        padding-top: 40px;
+    }
+
+    .spacing {
+        padding-left: 10px;
+    }
+
+    .spacing_first {
+        padding-left: 5px;
+    }
+}
