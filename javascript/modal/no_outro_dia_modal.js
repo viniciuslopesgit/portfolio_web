@@ -68,6 +68,15 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("Erro ao carregar a imagem:", images[currentImageIndex]);
     }
 
+    // Event listener para teclas do teclado
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "ArrowRight") {
+            nextImage();
+        } else if (event.key === "ArrowLeft") {
+            prevImage();
+        }
+    });
+
     // Exibir a primeira imagem ao carregar a página
     showCurrentImage();
 });

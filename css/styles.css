@@ -21,6 +21,17 @@ h1, h2, h3, h4 {
     color: #484848;
 }
 
+a {
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: normal;
+    color: #000;
+}
+
+#menu-container {
+    border-bottom: 1px solid #000;
+}
+
 #menu-container a {
     text-decoration: none;
     color: #808080;
@@ -28,7 +39,7 @@ h1, h2, h3, h4 {
     padding-top: 20px;
     padding-bottom: 10px;
     display: block;
-    border-bottom: 1px solid #000;
+    width: fit-content;
 }
 
 #menu-container a:hover {
@@ -88,6 +99,7 @@ h1, h2, h3, h4 {
 }
 
 #cv {
+    padding-top: 20px;
     color: #3a3939;
 }
 
