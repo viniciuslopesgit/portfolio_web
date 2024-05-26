@@ -43,6 +43,13 @@ html, body {
     color: #808080;
 }
 
+#menu_modal a {
+    cursor: pointer;
+}
+
+#menu_modal a:hover {
+    color: #00f;
+}
 #menu_modal a{
     text-decoration: none;
     color: #808080;
