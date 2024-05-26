@@ -77,6 +77,29 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    // Variáveis para rastrear o gesto de "swipe"
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    // Event listeners para gestos de toque
+    currentImgElement.addEventListener("touchstart", function(event) {
+        touchStartX = event.changedTouches[0].screenX;
+    });
+
+    currentImgElement.addEventListener("touchend", function(event) {
+        touchEndX = event.changedTouches[0].screenX;
+        handleSwipeGesture();
+    });
+
+    // Função para lidar com gestos de "swipe"
+    function handleSwipeGesture() {
+        if (touchEndX < touchStartX) {
+            nextImage();
+        } else if (touchEndX > touchStartX) {
+            prevImage();
+        }
+    }
+
     // Exibir a primeira imagem ao carregar a página
     showCurrentImage();
 });
