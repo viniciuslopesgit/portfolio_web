@@ -1,9 +1,12 @@
 const images = [
     "../imgs/installation_views/no_outro_dia/viniciuslopes_no_outro_dia_installationview_1.jpg",
+    "../imgs/installation_views/no_outro_dia/viniciuslopes_no_outro_dia_installationview_2.jpg",
+    "../imgs/installation_views/no_outro_dia/viniciuslopes_no_outro_dia_installationview_3.jpg",
+    "../imgs/installation_views/no_outro_dia/viniciuslopes_no_outro_dia_installationview_4.jpg",
+    "../imgs/installation_views/no_outro_dia/viniciuslopes_no_outro_dia_installationview_4a.jpg",
     "../imgs/installation_views/no_outro_dia/viniciuslopes_no_outro_dia_installationview_5.jpg",
     "../imgs/installation_views/no_outro_dia/viniciuslopes_no_outro_dia_installationview_6.jpg",
     "../imgs/installation_views/no_outro_dia/viniciuslopes_no_outro_dia_installationview_7.jpg"
-    // "../imgs/installation_views/no_outro_dia/viniciuslopes_no_outro_dia_installationview_2.jpg",
     
     // Adicione os caminhos das suas imagens aqui
 ];
