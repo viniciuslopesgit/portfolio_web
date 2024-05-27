@@ -57,7 +57,7 @@ a {
 }
 
 #menu2, #menu3 {
-    padding-left: 296px;
+    padding-left: 275px;
 }
 
 .menu ul {
@@ -99,7 +99,7 @@ a {
 }
 
 #cv {
-    padding-top: 20px;
+    padding-top: 50px;
     color: #3a3939;
 }
 
@@ -139,7 +139,7 @@ header h1 {
 }
 
 .gallery-main img {
-    max-width: 900px; /* Limita a largura da imagem a 600px */
+    max-height: 600px; /* Limita a largura da imagem a 600px */
     height: auto; /* Mantém a proporção da imagem */
     margin-bottom: 20px; /* Espaçamento entre as imagens */
 }
