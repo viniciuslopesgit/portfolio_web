@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'DejaVuSansMono';
-    src: url('/assets/ttf/DejaVuSansMono.ttf') format('truetype');
+    src: url('assets/ttf/DejaVuSansMono.ttf') format('truetype');
 }
 
 body {
