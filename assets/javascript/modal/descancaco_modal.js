@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     const images = [
-        "/assets/imgs/installation_views/descancaco/viniciuslopes_descancaco_installationview_1.jpg",
+        "../imgs/installation_views/descancaco/viniciuslopes_descancaco_installationview_1.jpg",
     ];
 
     let currentImageIndex = 0;
