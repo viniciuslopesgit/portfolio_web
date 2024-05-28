@@ -50,19 +50,21 @@ a {
 
 .row {
     display: flex;
+    max-width: 877px;
+    justify-content: space-between; 
 }
 
-.menu {
-    margin-right: 10px;
-}
-
-#menu2, #menu3 {
-    padding-left: 275px;
+#menu3 {
+    float: right;
 }
 
 .menu ul {
     list-style-type: none;
     padding: 0;
+}
+
+.menu ul li:last-child {
+    margin-right: 0; /* Remove a margem do último item para evitar espaçamento extra */
 }
 
 .menu ul li {
@@ -180,7 +182,8 @@ header h1 {
 #cookie-bar p {
     font-family: 'Helvetica', 'Arial', sans-serif;
     font-size: 12px;
-    font-weight: 100;
+    font-weight: bold;
+    text-transform: uppercase;
     margin: 0;
     color: #000;
 }
@@ -192,14 +195,13 @@ header h1 {
 #cookie-bar button {
     font-family: 'Helvetica', 'Arial', sans-serif;
     color: #000;
-    font-size: 12px;
-    font-weight: 100;
+    font-weight: bold;
+    text-transform: uppercase;
     background-color: #808080;
     cursor: pointer;
     border: 1px solid #000;
     padding: 5px 10px;
     white-space: nowrap;
-    text-transform: none;
     letter-spacing: 0;
     box-sizing: border-box;
 }
