@@ -85,8 +85,19 @@
 
     <script>
         function acceptCookies() {
+            // Oculta o aviso de cookies
             document.getElementById('cookie-bar').style.display = 'none';
+            // Define um cookie para armazenar o consentimento do usuário
+            document.cookie = "cookies_accepted=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Verifica se o usuário já aceitou os cookies
+            if (document.cookie.split(';').some((item) => item.trim().startsWith('cookies_accepted='))) {
+                // Oculta o aviso de cookies se o consentimento já foi dado
+                document.getElementById('cookie-bar').style.display = 'none';
+            }
+        });
     </script>
 
     <script src="assets/javascript/script.js"></script>
