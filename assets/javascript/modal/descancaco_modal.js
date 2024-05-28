@@ -10,14 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     const images = [
-        "../imgs/installation_views/no_outro_dia/viniciuslopes_no_outro_dia_installationview_1.jpg",
-        "../imgs/installation_views/no_outro_dia/viniciuslopes_no_outro_dia_installationview_2.jpg",
-        "../imgs/installation_views/no_outro_dia/viniciuslopes_no_outro_dia_installationview_3.jpg",
-        "../imgs/installation_views/no_outro_dia/viniciuslopes_no_outro_dia_installationview_4.jpg",
-        "../imgs/installation_views/no_outro_dia/viniciuslopes_no_outro_dia_installationview_4a.jpg",
-        "../imgs/installation_views/no_outro_dia/viniciuslopes_no_outro_dia_installationview_5.jpg",
-        "../imgs/installation_views/no_outro_dia/viniciuslopes_no_outro_dia_installationview_6.jpg",
-        "../imgs/installation_views/no_outro_dia/viniciuslopes_no_outro_dia_installationview_7.jpg"
+        "/assets/imgs/installation_views/descancaco/viniciuslopes_descancaco_installationview_1.jpg",
     ];
 
     let currentImageIndex = 0;
@@ -76,29 +69,6 @@ document.addEventListener("DOMContentLoaded", function() {
             prevImage();
         }
     });
-
-    // Variáveis para rastrear o gesto de "swipe"
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    // Event listeners para gestos de toque
-    currentImgElement.addEventListener("touchstart", function(event) {
-        touchStartX = event.changedTouches[0].screenX;
-    });
-
-    currentImgElement.addEventListener("touchend", function(event) {
-        touchEndX = event.changedTouches[0].screenX;
-        handleSwipeGesture();
-    });
-
-    // Função para lidar com gestos de "swipe"
-    function handleSwipeGesture() {
-        if (touchEndX < touchStartX) {
-            nextImage();
-        } else if (touchEndX > touchStartX) {
-            prevImage();
-        }
-    }
 
     // Exibir a primeira imagem ao carregar a página
     showCurrentImage();

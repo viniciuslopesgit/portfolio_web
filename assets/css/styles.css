@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'DejaVuSansMono';
-    src: url('../ttf/DejaVuSansMono.ttf') format('truetype');
+    src: url('/assets/ttf/DejaVuSansMono.ttf') format('truetype');
 }
 
 body {
@@ -18,7 +18,7 @@ h1, h2, h3, h4 {
     font-size: 12px;
     text-decoration: none;
     font-weight: normal;
-    color: #484848;
+    color: #000;
 }
 
 a {
@@ -44,7 +44,7 @@ a {
 
 #menu-container a:hover {
     text-decoration: none;
-    color: #00f;
+    color: blue;
     display: block;
 }
 
@@ -79,12 +79,12 @@ a {
 
 .menu ul li a:hover {
     text-decoration: none;
-    color: #00f;
+    color: blue;
     display: block;
 }
 
 .menu ul li a.active {
-    color: #00f;
+    color: blue;
     font-weight: normal;
 }
 
@@ -100,15 +100,15 @@ a {
 
 #cv {
     padding-top: 50px;
-    color: #3a3939;
+    color: #000;
 }
 
 #cv, #privacy_policy {
-    max-width: 900px;
+    max-width: 857px;
 }
 
 .h1_cv {
-    color: #0c0c0c;
+    color: #000;
     font-weight: bold;
 }
 
@@ -126,22 +126,27 @@ header h1 {
 
 #post {
     padding-top: 50px;
+    max-width: 857px;
 }
 
 #post_keep {
     padding-top: 70px;
 }
 
+#post_news {
+    padding-top: 50px;
+}
+
 .gallery-main {
     display: block;
-    flex-direction: column; /* Exibe os itens verticalmente */
+    flex-direction: column;
     align-items: left;
 }
 
 .gallery-main img {
-    max-height: 600px; /* Limita a largura da imagem a 600px */
-    height: auto; /* Mantém a proporção da imagem */
-    margin-bottom: 20px; /* Espaçamento entre as imagens */
+    max-height: 600px;
+    max-width: 857px;
+    margin-bottom: 20px;
 }
 
 .slideshow-container {
@@ -157,32 +162,6 @@ header h1 {
 .slides.active {
     display: block;
 }
-
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-
-
-
-
-/* MOBILE
 
 
 /* Media queries para dispositivos móveis */
