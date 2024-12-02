@@ -8,7 +8,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-    font-size: 10px;
+    font-size: 12px;
 }
 em {
     font-style: normal;
@@ -206,7 +206,7 @@ header h1 {
 /* Media queries para dispositivos móveis */
 @media (max-width: 768px) {
     body {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     h1, h2, h3, h4 {
@@ -273,7 +273,7 @@ header h1 {
 
 @media (max-width: 480px) {
     body {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     h1, h2, h3, h4 {
