@@ -29,7 +29,7 @@ a {
 }
 
 #menu-container a {
-    font-weight: bold;
+    font-weight: normal;
     text-decoration: none;
     color: #202020;
     padding-left: 20px;
