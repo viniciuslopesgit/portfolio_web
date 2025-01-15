@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('.menu a');
     const mainContent = document.getElementById('content');
@@ -9,14 +8,22 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => response.text())
             .then(data => {
                 mainContent.innerHTML = data;
+                attachLinkEvents(); // Reatribui eventos aos novos links
             })
             .catch(error => console.error('Error loading page:', error));
     }
 
-    // Simular clique no link "news" ao carregar a página
-    //const newsLink = document.getElementById('installation-link');
-    // newsLink.classList.add('active'); // Adiciona a classe 'active' ao link "news"
-    // loadContent(newsLink.getAttribute('data-content')); // Carrega o conteúdo da página "news.html"
+    // Função para reatribuir eventos de clique a links dinâmicos
+    function attachLinkEvents() {
+        const newLinks = mainContent.querySelectorAll('a[data-content]');
+        newLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetPage = this.getAttribute('data-content');
+                loadContent(targetPage); // Carrega o novo conteúdo
+            });
+        });
+    }
 
     // Event listener para os links do menu
     links.forEach(link => {
