@@ -20,14 +20,14 @@ h1, h2, h3, h4 {
     font-size: 12px;
     text-decoration: none;
     font-weight: normal;
-    color: #202020;
+    color: #4b4b4b;
 }
 
 a {
     font-size: 12px;
     text-decoration: none;
     font-weight: normal;
-    color: #202020;
+    color: #4b4b4b;
 }
 
 #menu-container a {
@@ -51,10 +51,6 @@ a {
     display: block;
 }
 
-.artwork_title_home {
-    
-    line-height: 0.3; /* Espaçamento entre linhas */
-}
 
 
 .row {
@@ -214,6 +210,11 @@ header h1 {
     box-sizing: border-box;
 }
 
+.footer {
+    bottom: 0px;
+    padding-top: 20px;
+}
+
 /* Media queries para dispositivos móveis */
 @media (max-width: 768px) {
     body {
@@ -225,7 +226,7 @@ header h1 {
     }
 
     #menu-container a {
-        color: #2d2d2d;
+    color: #4b4b4b;
         padding-left: 10px;
         padding-top: 10px;
         padding-bottom: 5px;
@@ -289,6 +290,7 @@ header h1 {
 
     h1, h2, h3, h4 {
         font-size: 10px;
+        color: #4b4b4b;
     }
 
     #menu-container a {
