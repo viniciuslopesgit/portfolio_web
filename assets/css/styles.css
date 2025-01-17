@@ -235,7 +235,21 @@ header h1 {
     }
 
     .menu ul li a {
-        color: #777777;
+        text-decoration: none;
+        color: #bcbcbc;
+        display: block;
+        width: fit-content;
+    }
+    
+    .menu ul li a:hover {
+        text-decoration: none;
+        color: #4b4b4b;
+        display: block;
+    }
+    
+    .menu ul li a.active {
+        color: #484848;
+        font-weight: normal;
     }
 
     .row {
@@ -307,6 +321,24 @@ header h1 {
     .menu ul li {
         padding-left: 15px;
         width: fit-content;
+    }
+    
+    .menu ul li a {
+        text-decoration: none;
+        color: #bcbcbc;
+        display: block;
+        width: fit-content;
+    }
+    
+    .menu ul li a:hover {
+        text-decoration: none;
+        color: #4b4b4b;
+        display: block;
+    }
+    
+    .menu ul li a.active {
+        color: #484848;
+        font-weight: normal;
     }
 
     #content {
