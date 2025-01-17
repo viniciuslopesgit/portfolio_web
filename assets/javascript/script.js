@@ -1,14 +1,28 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const links = document.querySelectorAll('.menu a');
     const mainContent = document.getElementById('content');
 
-    // Função para carregar conteúdo
-    function loadContent(url) {
-        fetch(url)
-            .then(response => response.text())
+    // Função para carregar conteúdo e subir ao topo
+    function loadContent(url, pushState = true) {
+        const absoluteUrl = new URL(url, location.origin); // Converte para URL absoluta
+        fetch(absoluteUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Erro ao carregar a página: ${response.statusText}`);
+                }
+                return response.text();
+            })
             .then(data => {
                 mainContent.innerHTML = data;
                 attachLinkEvents(); // Reatribui eventos aos novos links
+                
+                // Scroll para o topo da página
+                window.scrollTo(0, 0);
+
+                // Atualiza o histórico se necessário
+                if (pushState) {
+                    history.pushState({ page: absoluteUrl.href }, '', absoluteUrl.href);
+                }
             })
             .catch(error => console.error('Error loading page:', error));
     }
@@ -17,7 +31,15 @@ document.addEventListener('DOMContentLoaded', function() {
     function attachLinkEvents() {
         const newLinks = mainContent.querySelectorAll('a[data-content]');
         newLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
+            link.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+
+                // Exceção para links externos
+                if (href && (href.startsWith('http://') || href.startsWith('https://'))) {
+                    console.log(`Externo: Redirecionando para ${href}`);
+                    return; // Permite que o link externo seja aberto normalmente
+                }
+
                 e.preventDefault();
                 const targetPage = this.getAttribute('data-content');
                 loadContent(targetPage); // Carrega o novo conteúdo
@@ -27,7 +49,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Event listener para os links do menu
     links.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+
+            // Exceção para links externos
+            if (href && (href.startsWith('http://') || href.startsWith('https://'))) {
+                console.log(`Externo: Redirecionando para ${href}`);
+                return; // Permite que o link externo seja aberto normalmente
+            }
+
             e.preventDefault();
             const targetPage = this.getAttribute('data-content');
 
@@ -40,5 +70,12 @@ document.addEventListener('DOMContentLoaded', function() {
             // Carrega o conteúdo da página correspondente
             loadContent(targetPage);
         });
+    });
+
+    // Ouve eventos de alteração do histórico para lidar com "Voltar" e "Avançar"
+    window.addEventListener('popstate', function (event) {
+        if (event.state && event.state.page) {
+            loadContent(event.state.page, false); // Carrega a página sem atualizar o histórico
+        }
     });
 });
