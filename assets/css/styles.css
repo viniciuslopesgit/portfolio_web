@@ -226,11 +226,12 @@ header h1 {
     }
 
     #menu-container a {
-    color: #000000;
+        color: #000000;
         padding-left: 10px;
         padding-top: 10px;
         padding-bottom: 5px;
         font-size: 18px;
+        font-weight: bold;
         letter-spacing: 0px;
     }
 
@@ -309,6 +310,7 @@ header h1 {
     }
 
     #menu-container a {
+        font-weight: bold;
         color: black;
         padding-left: 15px;
         padding-top: 15px;
