@@ -41,7 +41,7 @@ a {
     color: black;
     display: block;
     width: 100%; /* Faz o link ocupar toda a largura disponível */
-    border-bottom: 1px solid rgb(168, 168, 168);
+    border-bottom: 1px solid rgb(72, 72, 72);
     box-sizing: border-box; /* Garante que o padding e border não afetem o cálculo da largura */
 }
 
@@ -64,6 +64,7 @@ a {
 }
 
 .menu ul {
+    text-transform: uppercase;
     list-style-type: none;
     padding: 0;
 }
