@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(data => {
                 mainContent.innerHTML = data;
                 attachLinkEvents(); // Reatribui eventos aos novos links
-                
+
                 // Scroll para o topo da página
                 window.scrollTo(0, 0);
 
@@ -34,10 +34,10 @@ document.addEventListener('DOMContentLoaded', function () {
             link.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
 
-                // Exceção para links externos
-                if (href && (href.startsWith('http://') || href.startsWith('https://'))) {
-                    console.log(`Externo: Redirecionando para ${href}`);
-                    return; // Permite que o link externo seja aberto normalmente
+                // Exceção para links externos e mailto:
+                if (href && (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:'))) {
+                    console.log(`Externo ou mailto: ${href}`);
+                    return; // Permite que o link seja aberto normalmente
                 }
 
                 e.preventDefault();
@@ -52,10 +52,10 @@ document.addEventListener('DOMContentLoaded', function () {
         link.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
 
-            // Exceção para links externos
-            if (href && (href.startsWith('http://') || href.startsWith('https://'))) {
-                console.log(`Externo: Redirecionando para ${href}`);
-                return; // Permite que o link externo seja aberto normalmente
+            // Exceção para links externos e mailto:
+            if (href && (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:'))) {
+                console.log(`Externo ou mailto: ${href}`);
+                return; // Permite que o link seja aberto normalmente
             }
 
             e.preventDefault();
