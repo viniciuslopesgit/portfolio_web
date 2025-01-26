@@ -256,6 +256,14 @@ header h1 {
         margin-right: 0;
     }
 
+    #menu2{
+        margin-top: -20px;
+        line-height: 20px;
+    }
+    #menu3{
+        margin-top: -22px;
+    }
+
     .menu ul li {
         padding-left: 10px;
         
