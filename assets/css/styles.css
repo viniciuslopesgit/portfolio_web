@@ -202,12 +202,13 @@ header h1 {
 
 #cookie-bar button {
     font-family: 'Helvetica', 'Arial', sans-serif;
-    color: #000;
+    color: rgb(13, 201, 13);
     font-weight: bold;
     text-transform: uppercase;
     background-color: #808080;
     cursor: pointer;
-    border: 1px solid #000;
+    border: 1px solid rgb(13, 201, 13);
+    border-radius: 3px;
     padding: 5px 10px;
     white-space: nowrap;
     letter-spacing: 0;
