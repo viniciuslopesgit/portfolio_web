@@ -23,14 +23,14 @@ h1, h2, h3, h4 {
     font-size: 12px;
     text-decoration: none;
     font-weight: normal;
-    color: #4b4b4b;
+    color: #000;
 }
 
 a {
     font-size: 12px;
     text-decoration: none;
     font-weight: normal;
-    color: #4b4b4b;
+    color: #000;
 }
 
 #menu-container a {
@@ -90,12 +90,12 @@ a {
 
 .menu ul li a:hover {
     text-decoration: none;
-    color: #4b4b4b;
+    color: #000;
     display: block;
 }
 
 .menu ul li a.active {
-    color: #4b4b4b;
+    color: #000;
     font-weight: normal;
 }
 
@@ -111,7 +111,7 @@ a {
 
 #cv {
     padding-top: 50px;
-    color: #4b4b4b;
+    color: #000;
 }
 
 #cv, #privacy_policy {
@@ -119,7 +119,7 @@ a {
 }
 
 .h1_cv {
-    color: #4b4b4b;
+    color: #000;
 }
 
 .spacing {
@@ -241,7 +241,7 @@ header h1 {
     
     .menu ul li a:hover {
         text-decoration: none;
-        color: #4b4b4b;
+        color: #000;
         display: block;
     }
     
@@ -310,7 +310,7 @@ header h1 {
     }
 
     h1, h2, h3, h4 {
-        color: #4b4b4b;
+        color: #000;
     }
 
     #menu-container a {
@@ -337,7 +337,7 @@ header h1 {
     
     .menu ul li a:hover {
         text-decoration: none;
-        color: #4b4b4b;
+        color: #000;
         display: block;
     }
     
