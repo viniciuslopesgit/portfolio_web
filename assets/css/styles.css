@@ -3,6 +3,10 @@
     src: url('../ttf/Dejavu/DejaVuSansMono.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Lora-Medium';
+    src: url('../ttf/Lora/static/Lora-Medium.ttf') format('truetype');
+}
 
 body {
     font-family: 'DejaVuSansMono', 'Times', sans-serif;
@@ -10,7 +14,6 @@ body {
     padding: 0;
     background-color: #ffffff;
     font-size: 12px;
-    color: #656565;
 }
 em {
     font-style: normal;
@@ -31,7 +34,7 @@ a {
 }
 
 #menu-container a {
-    font-family: 'Lora-Regular';
+    font-family: 'Lora-Medium';
     letter-spacing: 0.7px;
     font-size: 25px;
     margin-top: 20px;
@@ -81,7 +84,6 @@ a {
 
 .menu ul li a {
     text-decoration: none;
-    color: #bcbcbc;
     display: block;
     width: fit-content;
 }
@@ -234,7 +236,6 @@ header h1 {
 
     .menu ul li a {
         text-decoration: none;
-        color: #bcbcbc;
         display: block;
         width: fit-content;
     }
@@ -332,7 +333,6 @@ header h1 {
     
     .menu ul li a {
         text-decoration: none;
-        color: #bcbcbc;
         display: block;
         width: fit-content;
     }
